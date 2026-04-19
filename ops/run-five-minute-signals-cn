@@ -1,0 +1,38 @@
+#!/bin/zsh
+set -euo pipefail
+
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+ROOT_DIR=$(cd "$SCRIPT_DIR/.." && pwd)
+LOCK_DIR="$ROOT_DIR/.five_minute_signal_cn.lock"
+HISTORY_LOG="$ROOT_DIR/data/signals/cn/five_minute_cn_signal_history.log"
+HISTORY_ERR="$ROOT_DIR/data/signals/cn/five_minute_cn_signal_history.err"
+
+if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+  exit 0
+fi
+trap 'rmdir "$LOCK_DIR" >/dev/null 2>&1 || true' EXIT
+
+START_TS=$(date '+%Y-%m-%d %H:%M:%S')
+echo "===== RUN_START $START_TS =====" >>"$HISTORY_LOG"
+echo "===== RUN_START $START_TS =====" >>"$HISTORY_ERR"
+
+mkdir -p "$ROOT_DIR/data/signals/cn"
+
+if python3 "$ROOT_DIR/code/build_5m_signal_program.py" \
+  --market cn \
+  --range 20d \
+  --intraday-bars 400 \
+  --output "$ROOT_DIR/data/signals/cn/five_minute_cn_signal_results.xlsx" \
+  --live-output "$ROOT_DIR/data/signals/cn/five_minute_cn_live_signals.csv" \
+  --state-output "$ROOT_DIR/data/signals/cn/five_minute_cn_signal_state.csv" \
+  --history-output "$ROOT_DIR/data/signals/cn/five_minute_cn_signal_history.csv" \
+  >>"$HISTORY_LOG" 2>>"$HISTORY_ERR"; then
+  END_TS=$(date '+%Y-%m-%d %H:%M:%S')
+  echo "===== RUN_END $END_TS EXIT=0 =====" >>"$HISTORY_LOG"
+else
+  STATUS=$?
+  END_TS=$(date '+%Y-%m-%d %H:%M:%S')
+  echo "===== RUN_END $END_TS EXIT=$STATUS =====" >>"$HISTORY_LOG"
+  echo "===== RUN_END $END_TS EXIT=$STATUS =====" >>"$HISTORY_ERR"
+  exit "$STATUS"
+fi

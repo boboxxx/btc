@@ -1,0 +1,9 @@
+#!/bin/zsh
+set -euo pipefail
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+ROOT_DIR=$(cd "$SCRIPT_DIR/.." && pwd)
+exec python3 "$ROOT_DIR/code/build_open_nowcast.py" \
+  --market us \
+  --output "$ROOT_DIR/data/open_nowcast/us_open_nowcast_results.xlsx" \
+  --live-output "$ROOT_DIR/data/open_nowcast/us_open_nowcast_live.csv" \
+  "$@"
