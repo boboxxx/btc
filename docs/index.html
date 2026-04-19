@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSQuant Signal Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">WSQuant / GitHub Pages Dashboard</p>
+          <h1>实时信号看板</h1>
+          <p class="hero-text">
+            展示场内 `159941.SZ`、美股 `QQQ`、比特币 `BTC-USD` 的预测与 5 分钟盘中信号。页面仅读取静态 JSON，不在前端运行策略。
+          </p>
+        </div>
+        <div class="hero-status">
+          <div class="status-label">最后生成</div>
+          <div id="generatedAt" class="status-value">加载中</div>
+          <div id="sourceState" class="status-hint">等待数据</div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel panel-wide">
+          <div class="panel-head">
+            <h2>5 分钟盘中信号</h2>
+            <p>当前仓位、动作和最近 bar 时间</p>
+          </div>
+          <div id="intradayCards" class="card-grid"></div>
+        </section>
+
+        <section class="panel panel-wide panel-btc">
+          <div class="panel-head">
+            <h2>BTC 专区</h2>
+            <p>单独展示 `BTC-USD` 的当前信号、最近买卖变化和主要驱动因子</p>
+          </div>
+          <div id="btcCard" class="card-grid"></div>
+          <div id="btcChangesList" class="event-list"></div>
+        </section>
+
+        <section class="panel panel-wide">
+          <div class="panel-head">
+            <h2>开盘预测</h2>
+            <p>来自 open-nowcast 的最新快照</p>
+          </div>
+          <div id="openCards" class="card-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>最近变化</h2>
+            <p>只保留发生买入/卖出或状态切换的记录</p>
+          </div>
+          <div id="changesList" class="event-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>最近运行</h2>
+            <p>用于检查数据刷新是否正常</p>
+          </div>
+          <div id="historyList" class="event-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="signalCardTemplate">
+      <article class="signal-card">
+        <div class="signal-card-head">
+          <div>
+            <div class="market-name"></div>
+            <div class="symbol-name"></div>
+          </div>
+          <div class="action-pill"></div>
+        </div>
+        <div class="price-row">
+          <div class="price-box">
+            <span class="label">标的</span>
+            <span class="value signal-price"></span>
+          </div>
+          <div class="price-box">
+            <span class="label">NQ Main</span>
+            <span class="value nq-price"></span>
+          </div>
+        </div>
+        <dl class="metrics-grid">
+          <div>
+            <dt>数据时间</dt>
+            <dd class="feature-time"></dd>
+          </div>
+          <div>
+            <dt>市场阶段</dt>
+            <dd class="market-phase"></dd>
+          </div>
+          <div>
+            <dt>当前状态</dt>
+            <dd class="current-state"></dd>
+          </div>
+          <div>
+            <dt>建议状态</dt>
+            <dd class="target-state"></dd>
+          </div>
+          <div>
+            <dt>做多概率</dt>
+            <dd class="probability"></dd>
+          </div>
+          <div>
+            <dt>最近动作</dt>
+            <dd class="last-action"></dd>
+          </div>
+        </dl>
+        <div class="summary"></div>
+        <div class="drivers"></div>
+      </article>
+    </template>
+
+    <template id="eventItemTemplate">
+      <article class="event-item">
+        <div class="event-top">
+          <span class="event-market"></span>
+          <span class="event-action"></span>
+        </div>
+        <div class="event-summary"></div>
+        <div class="event-meta"></div>
+      </article>
+    </template>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
