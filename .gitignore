@@ -1,0 +1,17 @@
+# Local-only strategy/runtime code
+/code/
+/ops/
+/data/
+/docs/*.py
+/docs/*.sh
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Generated workbooks and logs
+*.xlsx
+*.log
+
+# OS/editor noise
+.DS_Store
