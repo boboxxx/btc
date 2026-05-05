@@ -107,7 +107,7 @@ function renderDashboard(data) {
   if (sources.five_minute_live_exists) available.push("5m");
   if (sources.open_nowcast_live_exists) available.push("open-nowcast");
   document.getElementById("sourceState").textContent = available.length
-    ? `已加载 ${available.join(" + ")}，每 60 秒自动刷新`
+    ? `已加载 ${available.join(" + ")}，时间为 UTC，每 60 秒自动刷新`
     : "没有找到数据源";
 
   const intradayMap = data.intraday ?? {};
