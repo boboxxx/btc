@@ -1,4 +1,5 @@
 const dataUrl = "./data/dashboard.json";
+const refreshIntervalMs = 60_000;
 
 function formatNumber(value, digits = 3) {
   if (value === null || value === undefined || value === "") return "NA";
@@ -88,21 +89,25 @@ function renderEvents(targetId, records, emptyText) {
   target.replaceChildren(...records.map(makeEventItem));
 }
 
-async function main() {
+async function loadDashboard() {
   const response = await fetch(`${dataUrl}?t=${Date.now()}`, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Failed to fetch dashboard data: ${response.status}`);
   }
-  const data = await response.json();
+  return response.json();
+}
 
+function renderDashboard(data) {
   document.getElementById("generatedAt").textContent = data.generated_at ?? "NA";
   const sources = data.sources ?? {};
   const available = [];
+  if (sources.us_live_exists) available.push("QQQ");
+  if (sources.cn_live_exists) available.push("场内");
+  if (sources.btc_live_exists) available.push("BTC");
   if (sources.five_minute_live_exists) available.push("5m");
-  if (sources.btc_live_exists) available.push("btc-5m");
   if (sources.open_nowcast_live_exists) available.push("open-nowcast");
   document.getElementById("sourceState").textContent = available.length
-    ? `已加载 ${available.join(" + ")}`
+    ? `已加载 ${available.join(" + ")}，每 60 秒自动刷新`
     : "没有找到数据源";
 
   const intradayMap = data.intraday ?? {};
@@ -120,14 +125,22 @@ async function main() {
   renderEvents("historyList", data.recent_history ?? [], "最近没有运行历史。");
 }
 
-main().catch((error) => {
-  document.getElementById("generatedAt").textContent = "加载失败";
-  document.getElementById("sourceState").textContent = error.message;
-  renderEmpty(document.getElementById("intradayCards"), "无法加载 dashboard.json。");
-  renderEmpty(document.getElementById("btcCard"), "无法加载 dashboard.json。");
-  renderEmpty(document.getElementById("openCards"), "无法加载 dashboard.json。");
-  renderEmpty(document.getElementById("btcChangesList"), "无法加载 dashboard.json。");
-  renderEmpty(document.getElementById("changesList"), "无法加载 dashboard.json。");
-  renderEmpty(document.getElementById("historyList"), "无法加载 dashboard.json。");
-  console.error(error);
-});
+async function refreshDashboard() {
+  try {
+    const data = await loadDashboard();
+    renderDashboard(data);
+  } catch (error) {
+    document.getElementById("generatedAt").textContent = "加载失败";
+    document.getElementById("sourceState").textContent = error.message;
+    renderEmpty(document.getElementById("intradayCards"), "无法加载 dashboard.json。");
+    renderEmpty(document.getElementById("btcCard"), "无法加载 dashboard.json。");
+    renderEmpty(document.getElementById("openCards"), "无法加载 dashboard.json。");
+    renderEmpty(document.getElementById("btcChangesList"), "无法加载 dashboard.json。");
+    renderEmpty(document.getElementById("changesList"), "无法加载 dashboard.json。");
+    renderEmpty(document.getElementById("historyList"), "无法加载 dashboard.json。");
+    console.error(error);
+  }
+}
+
+refreshDashboard();
+setInterval(refreshDashboard, refreshIntervalMs);

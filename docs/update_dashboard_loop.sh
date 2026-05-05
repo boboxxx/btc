@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$DIR"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$ROOT_DIR"
 
 timestamp() {
   date '+%Y-%m-%d %H:%M:%S'
 }
 
-echo "[$(timestamp)] Starting aligned 5-minute dashboard loop in $DIR"
+echo "[$(timestamp)] Starting aligned 5-minute dashboard loop in $ROOT_DIR"
 
 while true; do
   now_epoch=$(date +%s)
@@ -24,8 +25,8 @@ while true; do
   echo "[$(timestamp)] Waiting ${sleep_seconds}s until ${next_run}"
   sleep "${sleep_seconds}"
 
-  echo "[$(timestamp)] Running update_dashboard.sh"
-  if ! bash "$DIR/update_dashboard.sh"; then
+  echo "[$(timestamp)] Running ops/update_dashboard.sh"
+  if ! bash "$ROOT_DIR/ops/update_dashboard.sh"; then
     echo "[$(timestamp)] update_dashboard.sh failed, continuing to next 5-minute slot"
   fi
 done
