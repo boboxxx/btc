@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-15 23:03:30 UTC",
+  "generated_at": "2026-05-15 23:08:30 UTC",
   "intraday": {
     "cn": {
       "market": "场内",
       "symbol": "159941.SZ",
       "feature_bar_time": "2026-05-15 07:00:00 UTC",
-      "updated_at": "2026-05-15 23:02:32 UTC",
+      "updated_at": "2026-05-15 23:07:33 UTC",
       "trade_date": "2026-05-15 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
@@ -22,36 +22,36 @@
       "last_action_time": "2026-05-08 03:25:00 UTC",
       "signal_summary": "DATA_TIME(2026-05-15 07:00:00 UTC) NQMAIN_RT(29173.00) 159941.SZ(1.5640) -> 0%",
       "top_drivers": "nq_sma_ratio_13:+7.789 | nq_vol_21:+5.698 | nq_ret_5:-4.394 | nq_vol_8:+4.195 | nq_vol_20:-4.058",
-      "run_at": "2026-05-15 23:02:20 UTC"
+      "run_at": "2026-05-15 23:07:21 UTC"
     },
     "btc": {
       "market": "比特币",
       "symbol": "BTC-USD",
-      "feature_bar_time": "2026-05-15 23:00:00 UTC",
-      "updated_at": "2026-05-15 23:03:19 UTC",
+      "feature_bar_time": "2026-05-15 23:05:00 UTC",
+      "updated_at": "2026-05-15 23:08:19 UTC",
       "trade_date": "2026-05-15 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
       "action": "空仓",
       "market_phase": "live",
-      "wave_overlay": "btc_wave3_continuation",
-      "raw_probability": 0.0300876675085954,
-      "probability_long": 0.0634876675085954,
-      "smoothed_probability": 0.0427975426727344,
+      "wave_overlay": "btc_wave4_pullback",
+      "raw_probability": 0.0203398233313339,
+      "probability_long": 0.0483648233313339,
+      "smoothed_probability": 0.0354659216135027,
       "entry_confirm_count": 0,
       "nqmain_rt_value": 29173.0,
-      "signal_price": 79086.16,
+      "signal_price": 79062.74,
       "position_since": null,
       "last_action_time": "2026-05-15 00:50:00 UTC",
-      "signal_summary": "DATA_TIME(2026-05-15 23:00:00 UTC) NQMAIN_RT(29173.00) BTC-USD(79086.16) -> 0%",
-      "top_drivers": "nq_volume_rel_13:-2.471 | nq_volume_rel_8:+1.808 | session_low_so_far:-1.771 | nq_vol_21:-1.702 | nq_ret_20:-1.633",
-      "run_at": "2026-05-15 23:02:51 UTC"
+      "signal_summary": "DATA_TIME(2026-05-15 23:05:00 UTC) NQMAIN_RT(29173.00) BTC-USD(79062.74) -> 0%",
+      "top_drivers": "nq_volume_rel_13:-2.489 | nq_volume_rel_8:+1.784 | session_low_so_far:-1.773 | nq_vol_21:-1.698 | nq_ret_20:-1.639",
+      "run_at": "2026-05-15 23:07:52 UTC"
     },
     "us": {
       "market": "美股",
       "symbol": "QQQ",
       "feature_bar_time": "2026-05-15 20:00:00 UTC",
-      "updated_at": "2026-05-15 23:01:59 UTC",
+      "updated_at": "2026-05-15 23:07:00 UTC",
       "trade_date": "2026-05-15 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
@@ -68,7 +68,7 @@
       "last_action_time": "2026-05-15 15:55:02 UTC",
       "signal_summary": "DATA_TIME(2026-05-15 20:00:00 UTC) NQMAIN_RT(29173.00) QQQ(707.51) -> 0%",
       "top_drivers": "nq_close:+3.926 | tod_sin:-3.684 | bar_index:+1.844 | tod_min:+1.844 | qqq_sma_ratio_5:-1.042",
-      "run_at": "2026-05-15 23:00:03 UTC"
+      "run_at": "2026-05-15 23:05:03 UTC"
     }
   },
   "open_nowcast": {},
@@ -378,6 +378,39 @@
     {
       "market": "比特币",
       "symbol": "BTC-USD",
+      "feature_bar_time": "2026-05-15 23:05:00 UTC",
+      "updated_at": "2026-05-15 23:08:19 UTC",
+      "action": "空仓",
+      "recommended_state": 0,
+      "signal_price": 79062.74,
+      "run_at": "2026-05-15 23:07:52 UTC",
+      "run_seq": 1695
+    },
+    {
+      "market": "场内",
+      "symbol": "159941.SZ",
+      "feature_bar_time": "2026-05-15 07:00:00 UTC",
+      "updated_at": "2026-05-15 23:07:33 UTC",
+      "action": "空仓",
+      "recommended_state": 0,
+      "signal_price": 1.564,
+      "run_at": "2026-05-15 23:07:21 UTC",
+      "run_seq": 1756
+    },
+    {
+      "market": "美股",
+      "symbol": "QQQ",
+      "feature_bar_time": "2026-05-15 20:00:00 UTC",
+      "updated_at": "2026-05-15 23:07:00 UTC",
+      "action": "空仓",
+      "recommended_state": 0,
+      "signal_price": 707.5083,
+      "run_at": "2026-05-15 23:05:03 UTC",
+      "run_seq": 1758
+    },
+    {
+      "market": "比特币",
+      "symbol": "BTC-USD",
       "feature_bar_time": "2026-05-15 23:00:00 UTC",
       "updated_at": "2026-05-15 23:03:19 UTC",
       "action": "空仓",
@@ -561,39 +594,6 @@
       "signal_price": 1.564,
       "run_at": "2026-05-15 22:37:20 UTC",
       "run_seq": 1750
-    },
-    {
-      "market": "美股",
-      "symbol": "QQQ",
-      "feature_bar_time": "2026-05-15 20:00:00 UTC",
-      "updated_at": "2026-05-15 22:36:59 UTC",
-      "action": "空仓",
-      "recommended_state": 0,
-      "signal_price": 707.5083,
-      "run_at": "2026-05-15 22:35:03 UTC",
-      "run_seq": 1752
-    },
-    {
-      "market": "比特币",
-      "symbol": "BTC-USD",
-      "feature_bar_time": "2026-05-15 22:30:00 UTC",
-      "updated_at": "2026-05-15 22:33:18 UTC",
-      "action": "空仓",
-      "recommended_state": 0,
-      "signal_price": 79057.14,
-      "run_at": "2026-05-15 22:32:50 UTC",
-      "run_seq": 1688
-    },
-    {
-      "market": "场内",
-      "symbol": "159941.SZ",
-      "feature_bar_time": "2026-05-15 07:00:00 UTC",
-      "updated_at": "2026-05-15 22:32:31 UTC",
-      "action": "空仓",
-      "recommended_state": 0,
-      "signal_price": 1.564,
-      "run_at": "2026-05-15 22:32:19 UTC",
-      "run_seq": 1749
     }
   ],
   "sources": {
