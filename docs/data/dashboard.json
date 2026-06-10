@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10 15:05:02 BST",
+  "generated_at": "2026-06-10 15:06:02 BST",
   "display_timezone": "Europe/London",
   "strategy": {
     "us": {
@@ -22,36 +22,36 @@
     "us": {
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
-      "feature_bar_time": "2026-06-10 15:04:35 BST",
-      "updated_at": "2026-06-10 15:04:46 BST",
+      "feature_bar_time": "2026-06-10 15:05:35 BST",
+      "updated_at": "2026-06-10 15:05:45 BST",
       "trade_date": "2026-06-10 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
       "action": "\u7a7a\u4ed3",
       "market_phase": "intraday",
       "wave_overlay": "none",
-      "raw_probability": 0.7713379282157504,
-      "probability_long": 0.7925957927392866,
-      "smoothed_probability": 0.3172772007957655,
-      "entry_confirm_count": 1,
-      "nqmain_rt_value": 29027.5,
-      "nq_regime": "long_regime",
-      "nq_regime_score": 0.1609648345481133,
-      "nq_regime_reason": "nq_trend_positive",
+      "raw_probability": 0.4135111659710608,
+      "probability_long": 0.434769030494597,
+      "smoothed_probability": 0.1881365691897476,
+      "entry_confirm_count": 0,
+      "nqmain_rt_value": 29021.75,
+      "nq_regime": "neutral_regime",
+      "nq_regime_score": 0.0844253728932013,
+      "nq_regime_reason": "nq_neutral_core_allowed",
       "nq_regime_allow_long": true,
       "nq_adaptive_stop_loss": 0.015,
       "nq_data_source": "intraday",
       "nq_contract_symbol": "NQ=F",
       "nq_roll_date": "2026-06-15 01:00:00 BST",
       "nq_roll_adjustment": 0.0,
-      "nq_last_bar_time": "2026-06-10 14:54:30 BST",
+      "nq_last_bar_time": "2026-06-10 14:55:32 BST",
       "nq_freshness": "fresh",
-      "signal_price": 706.7800903320312,
+      "signal_price": 706.52001953125,
       "position_since": null,
       "last_action_time": "2026-06-10 14:31:35 BST",
-      "signal_summary": "DATA_TIME(2026-06-10 15:04:35 BST) NQMAIN_RT(29027.50) QQQ(706.78) -> 0%",
-      "top_drivers": "nq_vol_10:+4.288 | qqq_daily_prev_low_10:+4.040 | nq_session_close:-3.821 | qqq_daily_prev_low_5:+3.537 | nq_session_open:-3.530",
-      "run_at": "2026-06-10 15:04:32 BST"
+      "signal_summary": "DATA_TIME(2026-06-10 15:05:35 BST) NQMAIN_RT(29021.75) QQQ(706.52) -> 0%",
+      "top_drivers": "nq_vol_10:+4.235 | qqq_daily_prev_low_10:+4.083 | nq_session_close:-3.797 | qqq_daily_prev_low_5:+3.545 | nq_session_open:-3.509",
+      "run_at": "2026-06-10 15:05:32 BST"
     },
     "cn": {
       "market": "\u573a\u5185",
@@ -95,11 +95,11 @@
       "contract_symbol": "NQ=F",
       "roll_date": "2026-06-15 01:00:00 BST",
       "roll_adjustment": 0.0,
-      "last_bar_time": "2026-06-10 10:54:30 BST",
-      "available_at": "2026-06-10 09:54:30",
+      "last_bar_time": "2026-06-10 10:55:32 BST",
+      "available_at": "2026-06-10 09:55:32",
       "freshness": "fresh",
-      "age_days": 0.21534442556712963,
-      "rows": 13467,
+      "age_days": 0.2153218648611111,
+      "rows": 13468,
       "first_date": "2026-03-31 00:00:00",
       "last_date": "2026-06-10 00:00:00"
     }
@@ -200,6 +200,17 @@
     }
   ],
   "recent_history": [
+    {
+      "market": "\u7f8e\u80a1",
+      "symbol": "QQQ",
+      "feature_bar_time": "2026-06-10 15:05:35 BST",
+      "updated_at": "2026-06-10 15:05:45 BST",
+      "action": "\u7a7a\u4ed3",
+      "recommended_state": 0,
+      "signal_price": 706.52001953125,
+      "run_at": "2026-06-10 15:05:32 BST",
+      "run_seq": 9538
+    },
     {
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
@@ -408,17 +419,6 @@
       "signal_price": 706.969970703125,
       "run_at": "2026-06-10 14:46:32 BST",
       "run_seq": 9519
-    },
-    {
-      "market": "\u7f8e\u80a1",
-      "symbol": "QQQ",
-      "feature_bar_time": "2026-06-10 14:45:34 BST",
-      "updated_at": "2026-06-10 14:45:45 BST",
-      "action": "\u7a7a\u4ed3",
-      "recommended_state": 0,
-      "signal_price": 705.9600219726562,
-      "run_at": "2026-06-10 14:45:31 BST",
-      "run_seq": 9518
     }
   ],
   "sources": {
