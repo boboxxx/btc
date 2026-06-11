@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11 03:28:59 BST",
+  "generated_at": "2026-06-11 03:30:27 BST",
   "display_timezone": "Europe/London",
   "strategy": {
     "us": {
@@ -23,7 +23,7 @@
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
       "feature_bar_time": "2026-06-10 21:00:00 BST",
-      "updated_at": "2026-06-11 03:28:17 BST",
+      "updated_at": "2026-06-11 03:29:46 BST",
       "trade_date": "2026-06-10 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
@@ -34,7 +34,7 @@
       "probability_long": 0.1412578645235361,
       "smoothed_probability": 0.1478385429021541,
       "entry_confirm_count": 0,
-      "nqmain_rt_value": 28623.75,
+      "nqmain_rt_value": 28632.25,
       "nq_regime": "neutral_regime",
       "nq_regime_score": -0.1006070090853565,
       "nq_regime_reason": "nq_neutral_core_allowed",
@@ -44,33 +44,33 @@
       "nq_contract_symbol": "NQ=F",
       "nq_roll_date": "2026-06-15 01:00:00 BST",
       "nq_roll_adjustment": 0.0,
-      "nq_last_bar_time": "2026-06-11 03:17:59 BST",
+      "nq_last_bar_time": "2026-06-11 03:19:28 BST",
       "nq_freshness": "fresh",
       "signal_price": 693.26,
       "position_since": null,
       "last_action_time": "2026-06-09 15:48:01 BST",
-      "signal_summary": "DATA_TIME(2026-06-10 21:00:00 BST) NQMAIN_RT(28623.75) QQQ(693.26) -> 0%",
+      "signal_summary": "DATA_TIME(2026-06-10 21:00:00 BST) NQMAIN_RT(28632.25) QQQ(693.26) -> 0%",
       "top_drivers": "nq_session_close:-4.499 | nq_session_open:-3.404 | nq_session_volume:+2.144 | qqq_daily_prev_low_5:+2.142 | nq_session_high:-2.134",
-      "run_at": "2026-06-11 03:28:02 BST"
+      "run_at": "2026-06-11 03:29:31 BST"
     },
     "cn": {
       "market": "\u573a\u5185",
       "symbol": "159941.SZ",
-      "feature_bar_time": "2026-06-11 03:25:00 BST",
-      "updated_at": "2026-06-11 03:28:45 BST",
+      "feature_bar_time": "2026-06-11 03:30:00 BST",
+      "updated_at": "2026-06-11 03:30:13 BST",
       "trade_date": "2026-06-11 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
       "action": "\u7a7a\u4ed3",
       "market_phase": "intraday",
-      "wave_overlay": "cn_downtrend_follow",
-      "raw_probability": 0.0006386669823027,
-      "probability_long": 0.02,
+      "wave_overlay": "cn_oversold_rebound_floor",
+      "raw_probability": 0.0001317379912842,
+      "probability_long": 0.6299238095238096,
       "smoothed_probability": 0.2233079365079365,
       "entry_confirm_count": 1,
-      "nqmain_rt_value": 28645.5,
+      "nqmain_rt_value": 28624.75,
       "nq_regime": "neutral_regime",
-      "nq_regime_score": 0.0169144567155608,
+      "nq_regime_score": 0.0007781419109492,
       "nq_regime_reason": "nq_neutral_core_allowed",
       "nq_regime_allow_long": true,
       "nq_adaptive_stop_loss": 0.015,
@@ -78,14 +78,14 @@
       "nq_contract_symbol": "NQ=F",
       "nq_roll_date": "2026-06-15 01:00:00 BST",
       "nq_roll_adjustment": 0.0,
-      "nq_last_bar_time": "2026-06-11 03:18:32 BST",
+      "nq_last_bar_time": "2026-06-11 03:19:57 BST",
       "nq_freshness": "fresh",
-      "signal_price": 1.554,
+      "signal_price": 1.55,
       "position_since": null,
       "last_action_time": "2026-05-08 04:25:00 BST",
-      "signal_summary": "DATA_TIME(2026-06-11 03:25:00 BST) NQMAIN_RT(28645.50) 159941.SZ(1.5540) -> 0%",
-      "top_drivers": "nq_vol_21:-3.904 | nq_vol_20:-3.493 | nq_session_range:-3.349 | nq_vol_8:+3.337 | range_pos_so_far:-3.228",
-      "run_at": "2026-06-11 03:28:33 BST"
+      "signal_summary": "DATA_TIME(2026-06-11 03:30:00 BST) NQMAIN_RT(28624.75) 159941.SZ(1.5500) -> 0%",
+      "top_drivers": "nq_vol_21:-3.894 | nq_vol_20:-3.488 | nq_session_range:-3.221 | range_pos_so_far:-3.067 | nq_vol_8:+2.986",
+      "run_at": "2026-06-11 03:30:01 BST"
     }
   },
   "data_health": {
@@ -95,10 +95,10 @@
       "contract_symbol": "NQ=F",
       "roll_date": "2026-06-15 01:00:00 BST",
       "roll_adjustment": 0.0,
-      "last_bar_time": "2026-06-10 23:18:32 BST",
-      "available_at": "2026-06-10 22:18:32",
+      "last_bar_time": "2026-06-10 23:19:57 BST",
+      "available_at": "2026-06-10 22:19:57",
       "freshness": "fresh",
-      "age_days": 0.2153075463425926,
+      "age_days": 0.21534885016203703,
       "rows": 4583,
       "first_date": "2026-05-18 00:00:00",
       "last_date": "2026-06-10 00:00:00"
@@ -170,6 +170,28 @@
     }
   ],
   "recent_history": [
+    {
+      "market": "\u573a\u5185",
+      "symbol": "159941.SZ",
+      "feature_bar_time": "2026-06-11 03:30:00 BST",
+      "updated_at": "2026-06-11 03:30:13 BST",
+      "action": "\u7a7a\u4ed3",
+      "recommended_state": 0,
+      "signal_price": 1.55,
+      "run_at": "2026-06-11 03:30:01 BST",
+      "run_seq": 8560
+    },
+    {
+      "market": "\u7f8e\u80a1",
+      "symbol": "QQQ",
+      "feature_bar_time": "2026-06-10 21:00:00 BST",
+      "updated_at": "2026-06-11 03:29:46 BST",
+      "action": "\u7a7a\u4ed3",
+      "recommended_state": 0,
+      "signal_price": 693.26,
+      "run_at": "2026-06-11 03:29:31 BST",
+      "run_seq": 8686
+    },
     {
       "market": "\u573a\u5185",
       "symbol": "159941.SZ",
@@ -367,28 +389,6 @@
       "signal_price": 693.26,
       "run_at": "2026-06-11 03:16:02 BST",
       "run_seq": 8677
-    },
-    {
-      "market": "\u573a\u5185",
-      "symbol": "159941.SZ",
-      "feature_bar_time": "2026-06-11 03:15:00 BST",
-      "updated_at": "2026-06-11 03:15:14 BST",
-      "action": "\u7a7a\u4ed3",
-      "recommended_state": 0,
-      "signal_price": 1.56,
-      "run_at": "2026-06-11 03:15:02 BST",
-      "run_seq": 8550
-    },
-    {
-      "market": "\u7f8e\u80a1",
-      "symbol": "QQQ",
-      "feature_bar_time": "2026-06-10 21:00:00 BST",
-      "updated_at": "2026-06-11 03:14:47 BST",
-      "action": "\u7a7a\u4ed3",
-      "recommended_state": 0,
-      "signal_price": 693.26,
-      "run_at": "2026-06-11 03:14:32 BST",
-      "run_seq": 8676
     }
   ],
   "sources": {
