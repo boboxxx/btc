@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12 05:10:33 BST",
+  "generated_at": "2026-06-12 05:11:34 BST",
   "display_timezone": "Europe/London",
   "strategy": {
     "us": {
@@ -23,7 +23,7 @@
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
       "feature_bar_time": "2026-06-11 21:00:00 BST",
-      "updated_at": "2026-06-12 05:10:15 BST",
+      "updated_at": "2026-06-12 05:11:16 BST",
       "trade_date": "2026-06-11 00:00:00",
       "current_state": 0,
       "recommended_state": 0,
@@ -61,7 +61,7 @@
       "last_action_time": "2026-06-09 15:48:01 BST",
       "signal_summary": "DATA_TIME(2026-06-11 21:00:00 BST) NQMAIN_RT(29528.50) QQQ(716.54) -> 0%",
       "top_drivers": "nq_session_ret:-4.195 | open_to_now_ret:-2.582 | qqq_daily_ret_from_prev_close:+2.153 | qqq_daily_prev_low_50:+1.949 | qqq_daily_prev_low_5:+1.701",
-      "run_at": "2026-06-12 05:10:01 BST"
+      "run_at": "2026-06-12 05:11:02 BST"
     },
     "cn": {
       "market": "\u573a\u5185",
@@ -118,7 +118,7 @@
       "last_bar_time": "2026-06-12 00:59:59 BST",
       "available_at": "2026-06-11 23:59:59",
       "freshness": "fresh",
-      "age_days": 0.21534849145833332,
+      "age_days": 0.2160458236111111,
       "rows": 13319,
       "first_date": "2026-04-02 00:00:00",
       "last_date": "2026-06-11 00:00:00"
@@ -190,6 +190,17 @@
     }
   ],
   "recent_history": [
+    {
+      "market": "\u7f8e\u80a1",
+      "symbol": "QQQ",
+      "feature_bar_time": "2026-06-11 21:00:00 BST",
+      "updated_at": "2026-06-12 05:11:16 BST",
+      "action": "\u7a7a\u4ed3",
+      "recommended_state": 0,
+      "signal_price": 716.54,
+      "run_at": "2026-06-12 05:11:02 BST",
+      "run_seq": 8706
+    },
     {
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
@@ -398,17 +409,6 @@
       "signal_price": 716.54,
       "run_at": "2026-06-12 04:52:02 BST",
       "run_seq": 8687
-    },
-    {
-      "market": "\u7f8e\u80a1",
-      "symbol": "QQQ",
-      "feature_bar_time": "2026-06-11 21:00:00 BST",
-      "updated_at": "2026-06-12 04:51:16 BST",
-      "action": "\u7a7a\u4ed3",
-      "recommended_state": 0,
-      "signal_price": 716.54,
-      "run_at": "2026-06-12 04:51:02 BST",
-      "run_seq": 8686
     }
   ],
   "sources": {
