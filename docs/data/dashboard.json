@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18 23:00:05 BST",
+  "generated_at": "2026-06-18 23:01:06 BST",
   "display_timezone": "Europe/London",
   "strategy": {
     "us": {
@@ -23,7 +23,7 @@
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
       "feature_bar_time": "2026-06-18 21:00:00 BST",
-      "updated_at": "2026-06-18 22:59:46 BST",
+      "updated_at": "2026-06-18 23:00:46 BST",
       "trade_date": "2026-06-18 00:00:00",
       "current_state": 1,
       "recommended_state": 1,
@@ -45,7 +45,7 @@
       "nq_roll_date": "2026-09-14 01:00:00 BST",
       "nq_roll_adjustment": 0.0,
       "nq_last_bar_time": "2026-06-18 21:59:59 BST",
-      "nq_freshness": "fresh",
+      "nq_freshness": "stale",
       "signal_source": "nqmain_yahoo_overnight",
       "execution_allowed": false,
       "monitor_symbol": "NQ=F",
@@ -61,7 +61,7 @@
       "last_action_time": "2026-06-12 16:00:34 BST",
       "signal_summary": "DATA_TIME(2026-06-18 21:00:00 BST) NQMAIN_RT(30726.50) QQQ(740.24) -> 100% HOLD_SINCE(2026-06-12 16:00:34 BST)",
       "top_drivers": "qqq_daily_prev_low_50:+1.886 | tod_cos:+1.809 | qqq_daily_above_low_50:+1.761 | qqq_volume_rel_13:-1.669 | qqq_vol_20:-1.390",
-      "run_at": "2026-06-18 22:59:32 BST"
+      "run_at": "2026-06-18 23:00:32 BST"
     },
     "cn": {
       "market": "\u573a\u5185",
@@ -117,8 +117,8 @@
       "roll_adjustment": 0.0,
       "last_bar_time": "2026-06-18 17:59:59 BST",
       "available_at": "2026-06-18 16:59:59",
-      "freshness": "fresh",
-      "age_days": 0.24972732141203702,
+      "freshness": "stale",
+      "age_days": 0.25042305655092595,
       "rows": 13478,
       "first_date": "2026-04-09 00:00:00",
       "last_date": "2026-06-18 00:00:00"
@@ -133,15 +133,15 @@
       "base_recommended_state": 1,
       "base_signal_price": 740.24,
       "base_feature_bar_time": "2026-06-18 21:00:00 BST",
-      "overlay_bar_time": "2026-06-18 23:00:01 BST",
+      "overlay_bar_time": "2026-06-18 23:01:00 BST",
       "overlay_interval": "1m",
       "overlay_data_source": "yahoo_1m",
-      "overlay_price": 741.19,
+      "overlay_price": 741.23,
       "recent_1m_low": 740.62,
-      "recent_1m_high": 741.31,
-      "recent_1m_return": -0.0001483879670847,
-      "session_1m_return": 0.0021159371303025,
-      "range_position_1m": 0.8260869565218824,
+      "recent_1m_high": 741.5,
+      "recent_1m_return": 8.02784244651189e-05,
+      "session_1m_return": 0.0020277668879185,
+      "range_position_1m": 0.6931818181818372,
       "hard_stop_loss": 0.025,
       "hard_stop_reference_price": 721.4984741210938,
       "hard_stop_reference_source": "latest_buy_history",
@@ -152,12 +152,12 @@
       "entry_confirmed_1m": false,
       "nq_risk_state": "neutral",
       "nq_overlay_price": 30726.5,
-      "nq_recent_1m_return": -0.0003090838105153,
+      "nq_recent_1m_return": -0.0001138952164009,
       "nq_range_position_1m": 0.4819277108433735,
       "execution_state": "monitor",
       "execution_action": "no_execution",
       "execution_reason": "5m_signal_only",
-      "run_at": "2026-06-18 23:00:03 BST"
+      "run_at": "2026-06-18 23:01:04 BST"
     }
   },
   "open_nowcast": {},
@@ -269,6 +269,17 @@
     }
   ],
   "recent_history": [
+    {
+      "market": "\u7f8e\u80a1",
+      "symbol": "QQQ",
+      "feature_bar_time": "2026-06-18 21:00:00 BST",
+      "updated_at": "2026-06-18 23:00:46 BST",
+      "action": "\u6301\u6709",
+      "recommended_state": 1,
+      "signal_price": 740.24,
+      "run_at": "2026-06-18 23:00:32 BST",
+      "run_seq": 14741
+    },
     {
       "market": "\u7f8e\u80a1",
       "symbol": "QQQ",
@@ -477,17 +488,6 @@
       "signal_price": 740.24,
       "run_at": "2026-06-18 22:41:32 BST",
       "run_seq": 14722
-    },
-    {
-      "market": "\u7f8e\u80a1",
-      "symbol": "QQQ",
-      "feature_bar_time": "2026-06-18 21:00:00 BST",
-      "updated_at": "2026-06-18 22:40:46 BST",
-      "action": "\u6301\u6709",
-      "recommended_state": 1,
-      "signal_price": 740.24,
-      "run_at": "2026-06-18 22:40:32 BST",
-      "run_seq": 14721
     }
   ],
   "sources": {
